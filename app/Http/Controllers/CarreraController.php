@@ -25,7 +25,9 @@ class CarreraController extends Controller
      */
     public function create()
     {
-        //
+    
+    return viewt('carreras.create');
+
     }
 
     /**
