@@ -34,4 +34,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::resource('/carrera', 'CarreraController');
+Route::resource('/aula', 'aulaController');
+Route::resource('/ayudante', 'ayudanteController');
+Route::resource('/docente', 'docenteController');
+Route::resource('/horario', 'horarioController');
+Route::resource('/materia', 'materiaController');
+
 

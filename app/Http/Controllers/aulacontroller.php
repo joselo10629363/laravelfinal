@@ -3,9 +3,9 @@
 namespace prueba2\Http\Controllers;
 
 use Illuminate\Http\Request;
-use prueba2\Carrera;
+use prueba2\aula;
 
-class CarreraController extends Controller
+class aulacontroller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class CarreraController extends Controller
      */
     public function index()
     {
-        $carreras=Carrera::all();
-        return view('carrera.index', compact('carreras'));
+        $aula=aula::all();
+        return view('aula.index', compact('aula'));
     }
 
     /**
@@ -25,9 +25,7 @@ class CarreraController extends Controller
      */
     public function create()
     {
-    
-    return viewt('carreras.create');
-
+        return view('aula.create');
     }
 
     /**
@@ -38,11 +36,8 @@ class CarreraController extends Controller
      */
     public function store(Request $request)
     {
-              $carreras = new Carrera ();
-        $carreras->name = $request->input('Nombre');
-        $carreras->save();
-
-        return view('Aula creada .create');
+        aula::create($request->all());
+        return 'completado';
     }
 
     /**

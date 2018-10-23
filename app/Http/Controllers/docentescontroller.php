@@ -9,6 +9,9 @@ class docentescontroller extends Controller
     public function index()
     {
         $docentes=docentes::all();
-        return view('docentes.index', compact('docentes'));
+        return view('docentes/index', compact('docentes'));
     }
+
+
+    
 }
